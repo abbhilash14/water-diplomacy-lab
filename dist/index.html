@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practise cooperation over shared water. A working demonstration of a facilitated water diplomacy workshop in the fictional Sahari Basin.">
+  <meta name="theme-color" content="#11686b">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <title>Water Diplomacy Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Water Diplomacy Lab home"><span class="brand-mark" aria-hidden="true">≈</span><span>Water Diplomacy<span class="brand-small">LAB / WORKSHOP PROTOTYPE</span></span></a>
+      <div class="session-picker"><label for="session-select">CURRENT WORKSHOP</label><select id="session-select" aria-label="Current workshop"></select><button id="new-session" class="text-button" type="button">+ New workshop</button></div>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom"><div class="local-dot"><span></span> Saved in this browser</div><p>Try both sides of the workshop using the role switcher.</p><button class="text-button" id="how-it-works" type="button">How this prototype works ↗</button></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <span id="page-label">Overview</span></div><label class="role-switch"><span>VIEW AS</span><select id="role-select" aria-label="View as role"></select></label></header>
+      <div class="demo-banner"><span class="demo-pill">DEMO</span><span>Fictional training exercise · Browser-only data · Guided advisor, no live AI</span><button type="button" id="demo-about" class="text-button">How it works</button></div>
+      <div id="session-strip" class="session-strip"></div>
+      <main id="main" tabindex="-1"></main>
+      <footer class="footer"><span>Water Diplomacy Lab</span><span>Learn through negotiation. Improve through reflection.</span></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+</body>
+</html>
